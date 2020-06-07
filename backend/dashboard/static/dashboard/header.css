@@ -1,0 +1,66 @@
+header {
+    background: linear-gradient(45deg, #8614ce, #ff0057);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    overflow: hidden;
+    border-radius: 0 0 30% 30%;
+    color: rgb(255, 255, 255);
+}
+.company-name {
+  
+  font: bold;
+  animation-name: dance;
+  overflow: hidden;
+  white-space: nowrap;
+  animation-duration: 2s; 
+  animation-timing-function: ease-out; 
+  animation-delay: 0s;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+  animation-play-state: running; 
+  cursor: pointer;
+}
+
+@keyframes dance {
+  0% {
+    width: 0ch;
+  }
+  100% {
+    width: 13ch;
+  }
+}
+
+
+
+/* Small screen */
+@media only screen and (max-width: 600px) {
+
+  .company-name {
+    margin: auto;
+    display: relative;
+    letter-spacing: 0.4rem;
+    font-size: 2rem;
+  }
+  header {
+    margin: 0;
+  }
+  
+
+}
+
+
+/* Large screen */
+@media only screen and (min-width: 600px) {
+ .company-name {
+  margin: auto;
+  display: relative;
+  letter-spacing: 0.5rem;
+  font-size: 3rem;
+ }
+  
+  
+}
+
+
+
+
+  

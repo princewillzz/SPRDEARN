@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+</head>
+
+<body>
+    <div class="login-page">
+
+        <div class="form">
+            <form class="registration-form" method="POST" action="{% url 'register_view' %}">
+                {% csrf_token %}
+                <input type="text" placeholder="Name" name="name" /><br>
+                <input type="text" placeholder="Phone number" name="username" required="true" /><br>
+                <input type="password" placeholder="Password" name="password" required="true" /><br>
+                <input type="password" placeholder="verify Password" /><br>
+                <input type="submit" value="CREATE" class="btn-create">
+                <p class="message">Already Registered?<a href="#">Login</a></p>
+            </form>
+
+            <form class="login-form" method="POST" action="{% url 'login_view' %}">
+                {% csrf_token %}
+                <input type="text" placeholder="Phone number" required="true" name="username" />
+                <input type="password" placeholder="Password" required="true" name="password" />
+                <input type="submit" value="LOGIN" class="btn-login">
+                <p class="message">Not Registered? <a href="#">Register</a>
+
+        </div>
+    </div>
+    <script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+    <script>
+        $('.message a').click(function () {
+            $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
+        });
+    </script>
+    <link rel="stylesheet" href="{% static 'accounts/login_style.css' %}">
+</body>
+
+</html>
