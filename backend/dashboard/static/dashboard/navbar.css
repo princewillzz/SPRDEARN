@@ -32,8 +32,6 @@ main, header, footer {
 }
 
 .navbar {
-
-    position: fixed;
     background-color: var(--bg-primary);
     transition: 200ms ease;
 }
@@ -81,11 +79,13 @@ main, header, footer {
 
 /* Small screen */
 @media only screen and (max-width: 600px) {
-
     .navbar {
         bottom: 0;
         width: 100vw;
         height: 5rem;
+        position: fixed;
+        z-index: 1;
+        
     }
     .navbar-nav {
         flex-direction: row;
@@ -93,8 +93,9 @@ main, header, footer {
     .nav-link {
         justify-content: center;
     }
-    main {
+    main, header, footer {
         margin: 0;
+        margin-bottom: 8rem;
     }
     
 
@@ -107,7 +108,7 @@ main, header, footer {
         top: 0;
         width: 5rem;
         height: 100vh;
-        
+        position: fixed;
     }
     .navbar:hover {
         width: 16rem;

@@ -64,6 +64,7 @@
         <li>Earning</li>
         <li>dashboard</li>
         <li>logout</li>
+        {% block body %} {% endblock %}
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum possimus similique officia veritatis
             suscipit. Porro quidem sapiente deserunt quisquam, atque cum fugiat quaerat, tenetur iure, saepe ipsum
             voluptatem maiores voluptates!</p>
@@ -165,9 +166,14 @@
             mollitia ea voluptatem? Nesciunt quae consequatur aliquam totam quaerat ad saepe. Odit, quisquam
             officia.
         </p>
+
+
+
+
+
     </main>
 
-    {% block body %} {% endblock %}
+
     <link rel="stylesheet" href="{% static 'dashboard/navbar.css' %}">
     <link rel="stylesheet" href="{% static 'dashboard/header.css' %}">
     <link rel="stylesheet" href="{% static 'dashboard/fontawesome/css/all.css' %}">
